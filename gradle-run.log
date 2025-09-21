@@ -1,0 +1,48 @@
+Initialized native services in: /home/tarara-x/.gradle/native
+Initialized jansi services in: /home/tarara-x/.gradle/native
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.14.3/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Starting process 'Gradle build daemon'. Working directory: /home/tarara-x/.gradle/daemon/8.14.3 Command: /usr/lib/jvm/jdk-24.0.2-oracle-x64/bin/java --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.lang.invoke=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.prefs/java.util.prefs=ALL-UNNAMED --add-exports=jdk.compiler/com.sun.tools.javac.api=ALL-UNNAMED --add-exports=jdk.compiler/com.sun.tools.javac.util=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.prefs/java.util.prefs=ALL-UNNAMED --add-opens=java.base/java.nio.charset=ALL-UNNAMED --add-opens=java.base/java.net=ALL-UNNAMED --add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED --add-opens=java.xml/javax.xml.namespace=ALL-UNNAMED --enable-native-access=ALL-UNNAMED -XX:MaxMetaspaceSize=384m -XX:+HeapDumpOnOutOfMemoryError -Xms256m -Xmx512m -Dfile.encoding=UTF-8 -Duser.country=US -Duser.language=en -Duser.variant -cp /home/tarara-x/.gradle/wrapper/dists/gradle-8.14.3-bin/cv11ve7ro1n3o1j4so8xd9n66/gradle-8.14.3/lib/gradle-daemon-main-8.14.3.jar -javaagent:/home/tarara-x/.gradle/wrapper/dists/gradle-8.14.3-bin/cv11ve7ro1n3o1j4so8xd9n66/gradle-8.14.3/lib/agents/gradle-instrumentation-agent-8.14.3.jar org.gradle.launcher.daemon.bootstrap.GradleDaemon 8.14.3
+Successfully started process 'Gradle build daemon'
+An attempt to start the daemon took 0.874 secs.
+The client will now receive all logging from the daemon (pid: 29454). The daemon log file: /home/tarara-x/.gradle/daemon/8.14.3/daemon-29454.out.log
+Daemon will be stopped at the end of the build 
+Using 8 worker leases.
+Received JVM installation metadata from '/usr/lib/jvm/jdk-24.0.2-oracle-x64': {JAVA_HOME=/usr/lib/jvm/jdk-24.0.2-oracle-x64, JAVA_VERSION=24.0.2, JAVA_VENDOR=Oracle Corporation, RUNTIME_NAME=Java(TM) SE Runtime Environment, RUNTIME_VERSION=24.0.2+12-54, VM_NAME=Java HotSpot(TM) 64-Bit Server VM, VM_VERSION=24.0.2+12-54, VM_VENDOR=Oracle Corporation, OS_ARCH=amd64}
+Watching the file system is configured to be enabled if available
+Now considering [/home/tarara-x/IdeaProjects/my-eshop] as hierarchies to watch
+File system watching is active
+Starting Build
+Settings evaluated using settings file '/home/tarara-x/IdeaProjects/my-eshop/settings.gradle'.
+Projects loaded. Root project using build file '/home/tarara-x/IdeaProjects/my-eshop/build.gradle'.
+Included projects: [root project 'my-eshop']
+
+> Configure project :
+Evaluating root project 'my-eshop' using build file '/home/tarara-x/IdeaProjects/my-eshop/build.gradle'.
+Resolved plugin [id: 'java']
+Resolved plugin [id: 'org.springframework.boot', version: '3.5.5']
+Resolved plugin [id: 'io.spring.dependency-management', version: '1.1.7']
+Applying dependency management to configuration 'annotationProcessor' in project 'my-eshop'
+Applying dependency management to configuration 'apiElements' in project 'my-eshop'
+Applying dependency management to configuration 'archives' in project 'my-eshop'
+Applying dependency management to configuration 'bootArchives' in project 'my-eshop'
+Applying dependency management to configuration 'compileClasspath' in project 'my-eshop'
+Applying dependency management to configuration 'compileOnly' in project 'my-eshop'
+Applying dependency management to configuration 'default' in project 'my-eshop'
+Applying dependency management to configuration 'developmentOnly' in project 'my-eshop'
+Applying dependency management to configuration 'implementation' in project 'my-eshop'
+Applying dependency management to configuration 'mainSourceElements' in project 'my-eshop'
+Applying dependency management to configuration 'productionRuntimeClasspath' in project 'my-eshop'
+Applying dependency management to configuration 'runtimeClasspath' in project 'my-eshop'
+Applying dependency management to configuration 'runtimeElements' in project 'my-eshop'
+Applying dependency management to configuration 'runtimeOnly' in project 'my-eshop'
+Applying dependency management to configuration 'testAndDevelopmentOnly' in project 'my-eshop'
+Applying dependency management to configuration 'testAnnotationProcessor' in project 'my-eshop'
+Applying dependency management to configuration 'testCompileClasspath' in project 'my-eshop'
+Applying dependency management to configuration 'testCompileOnly' in project 'my-eshop'
+Applying dependency management to configuration 'testImplementation' in project 'my-eshop'
+Applying dependency management to configuration 'testResultsElementsForTest' in project 'my-eshop'
+Applying dependency management to configuration 'testRuntimeClasspath' in project 'my-eshop'
+Applying dependency management to configuration 'testRuntimeOnly' in project 'my-eshop'
+All projects evaluated.
+
+[Incubating] Problems report is available at: file:///home/tarara-x/IdeaProjects/my-eshop/build/reports/problems/problems-report.html

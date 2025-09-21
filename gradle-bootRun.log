@@ -1,0 +1,135 @@
+Initialized native services in: /home/tarara-x/.gradle/native
+Initialized jansi services in: /home/tarara-x/.gradle/native
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.14.3/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Starting process 'Gradle build daemon'. Working directory: /home/tarara-x/.gradle/daemon/8.14.3 Command: /usr/lib/jvm/jdk-24.0.2-oracle-x64/bin/java --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.lang.invoke=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.prefs/java.util.prefs=ALL-UNNAMED --add-exports=jdk.compiler/com.sun.tools.javac.api=ALL-UNNAMED --add-exports=jdk.compiler/com.sun.tools.javac.util=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.prefs/java.util.prefs=ALL-UNNAMED --add-opens=java.base/java.nio.charset=ALL-UNNAMED --add-opens=java.base/java.net=ALL-UNNAMED --add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED --add-opens=java.xml/javax.xml.namespace=ALL-UNNAMED --enable-native-access=ALL-UNNAMED -XX:MaxMetaspaceSize=384m -XX:+HeapDumpOnOutOfMemoryError -Xms256m -Xmx512m -Dfile.encoding=UTF-8 -Duser.country=US -Duser.language=en -Duser.variant -cp /home/tarara-x/.gradle/wrapper/dists/gradle-8.14.3-bin/cv11ve7ro1n3o1j4so8xd9n66/gradle-8.14.3/lib/gradle-daemon-main-8.14.3.jar -javaagent:/home/tarara-x/.gradle/wrapper/dists/gradle-8.14.3-bin/cv11ve7ro1n3o1j4so8xd9n66/gradle-8.14.3/lib/agents/gradle-instrumentation-agent-8.14.3.jar org.gradle.launcher.daemon.bootstrap.GradleDaemon 8.14.3
+Successfully started process 'Gradle build daemon'
+An attempt to start the daemon took 0.893 secs.
+The client will now receive all logging from the daemon (pid: 30155). The daemon log file: /home/tarara-x/.gradle/daemon/8.14.3/daemon-30155.out.log
+Daemon will be stopped at the end of the build 
+Using 8 worker leases.
+Received JVM installation metadata from '/usr/lib/jvm/jdk-24.0.2-oracle-x64': {JAVA_HOME=/usr/lib/jvm/jdk-24.0.2-oracle-x64, JAVA_VERSION=24.0.2, JAVA_VENDOR=Oracle Corporation, RUNTIME_NAME=Java(TM) SE Runtime Environment, RUNTIME_VERSION=24.0.2+12-54, VM_NAME=Java HotSpot(TM) 64-Bit Server VM, VM_VERSION=24.0.2+12-54, VM_VENDOR=Oracle Corporation, OS_ARCH=amd64}
+Watching the file system is configured to be enabled if available
+Now considering [/home/tarara-x/IdeaProjects/my-eshop] as hierarchies to watch
+File system watching is active
+Starting Build
+Settings evaluated using settings file '/home/tarara-x/IdeaProjects/my-eshop/settings.gradle'.
+Projects loaded. Root project using build file '/home/tarara-x/IdeaProjects/my-eshop/build.gradle'.
+Included projects: [root project 'my-eshop']
+
+> Configure project :
+Evaluating root project 'my-eshop' using build file '/home/tarara-x/IdeaProjects/my-eshop/build.gradle'.
+Resolved plugin [id: 'java']
+Resolved plugin [id: 'org.springframework.boot', version: '3.5.5']
+Resolved plugin [id: 'io.spring.dependency-management', version: '1.1.7']
+Applying dependency management to configuration 'annotationProcessor' in project 'my-eshop'
+Applying dependency management to configuration 'apiElements' in project 'my-eshop'
+Applying dependency management to configuration 'archives' in project 'my-eshop'
+Applying dependency management to configuration 'bootArchives' in project 'my-eshop'
+Applying dependency management to configuration 'compileClasspath' in project 'my-eshop'
+Applying dependency management to configuration 'compileOnly' in project 'my-eshop'
+Applying dependency management to configuration 'default' in project 'my-eshop'
+Applying dependency management to configuration 'developmentOnly' in project 'my-eshop'
+Applying dependency management to configuration 'implementation' in project 'my-eshop'
+Applying dependency management to configuration 'mainSourceElements' in project 'my-eshop'
+Applying dependency management to configuration 'productionRuntimeClasspath' in project 'my-eshop'
+Applying dependency management to configuration 'runtimeClasspath' in project 'my-eshop'
+Applying dependency management to configuration 'runtimeElements' in project 'my-eshop'
+Applying dependency management to configuration 'runtimeOnly' in project 'my-eshop'
+Applying dependency management to configuration 'testAndDevelopmentOnly' in project 'my-eshop'
+Applying dependency management to configuration 'testAnnotationProcessor' in project 'my-eshop'
+Applying dependency management to configuration 'testCompileClasspath' in project 'my-eshop'
+Applying dependency management to configuration 'testCompileOnly' in project 'my-eshop'
+Applying dependency management to configuration 'testImplementation' in project 'my-eshop'
+Applying dependency management to configuration 'testResultsElementsForTest' in project 'my-eshop'
+Applying dependency management to configuration 'testRuntimeClasspath' in project 'my-eshop'
+Applying dependency management to configuration 'testRuntimeOnly' in project 'my-eshop'
+All projects evaluated.
+Task name matched 'bootRun'
+Selected primary task 'bootRun' from project :
+Starting process 'command '/home/tarara-x/.jdks/openjdk-25/bin/java''. Working directory: /home/tarara-x/.gradle/.tmp/tmp-jvm13328999083461127762probe Command: /home/tarara-x/.jdks/openjdk-25/bin/java -Xmx32m -Xms32m -cp . JavaProbe
+Successfully started process 'command '/home/tarara-x/.jdks/openjdk-25/bin/java''
+Received JVM installation metadata from '/home/tarara-x/.jdks/openjdk-25': {JAVA_HOME=/home/tarara-x/.jdks/openjdk-25, JAVA_VERSION=25, JAVA_VENDOR=Oracle Corporation, RUNTIME_NAME=OpenJDK Runtime Environment, RUNTIME_VERSION=25+36-3489, VM_NAME=OpenJDK 64-Bit Server VM, VM_VERSION=25+36-3489, VM_VENDOR=Oracle Corporation, OS_ARCH=amd64}
+Resolving global dependency management for project 'my-eshop'
+Excluding []
+Excluding []
+Excluding []
+Excluding []
+Excluding []
+Tasks to be executed: [task ':compileJava', task ':processResources', task ':classes', task ':resolveMainClassName', task ':bootRun']
+Tasks that were excluded: []
+Resolve mutations for :compileJava (Thread[#155,Execution worker,5,main]) started.
+:compileJava (Thread[#155,Execution worker,5,main]) started.
+
+> Task :compileJava UP-TO-DATE
+Custom actions are attached to task ':compileJava'.
+Caching disabled for task ':compileJava' because:
+  Build cache is disabled
+Skipping task ':compileJava' as it is up-to-date.
+Resolve mutations for :processResources (Thread[#155,Execution worker,5,main]) started.
+:processResources (Thread[#155,Execution worker,5,main]) started.
+
+> Task :processResources UP-TO-DATE
+Caching disabled for task ':processResources' because:
+  Build cache is disabled
+  Not worth caching
+Skipping task ':processResources' as it is up-to-date.
+Resolve mutations for :classes (Thread[#155,Execution worker,5,main]) started.
+:classes (Thread[#155,Execution worker,5,main]) started.
+
+> Task :classes UP-TO-DATE
+Skipping task ':classes' as it has no actions.
+Resolve mutations for :resolveMainClassName (Thread[#155,Execution worker,5,main]) started.
+:resolveMainClassName (Thread[#155,Execution worker,5,main]) started.
+
+> Task :resolveMainClassName
+Caching disabled for task ':resolveMainClassName' because:
+  Build cache is disabled
+  Not worth caching
+Task ':resolveMainClassName' is not up-to-date because:
+  Output property 'outputFile' file /home/tarara-x/IdeaProjects/my-eshop/build/resolvedMainClassName has been removed.
+Resolve mutations for :bootRun (Thread[#155,Execution worker,5,main]) started.
+:bootRun (Thread[#155,Execution worker,5,main]) started.
+
+> Task :bootRun FAILED
+Caching disabled for task ':bootRun' because:
+  Build cache is disabled
+Task ':bootRun' is not up-to-date because:
+  Task has not declared any outputs despite executing actions.
+Starting process 'command '/usr/lib/jvm/jdk-24.0.2-oracle-x64/bin/java''. Working directory: /home/tarara-x/IdeaProjects/my-eshop Command: /usr/lib/jvm/jdk-24.0.2-oracle-x64/bin/java -XX:TieredStopAtLevel=1 -Dfile.encoding=UTF-8 -Duser.country=US -Duser.language=en -Duser.variant -cp /home/tarara-x/IdeaProjects/my-eshop/build/classes/java/main:/home/tarara-x/IdeaProjects/my-eshop/build/resources/main:/home/tarara-x/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-autoconfigure/3.5.5/348f4fb99d61a1ea039a44ec667b61657adb54b2/spring-boot-autoconfigure-3.5.5.jar:/home/tarara-x/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot/3.5.5/7d50b76ea4905d6c61fea5cb6556bc735c55da1/spring-boot-3.5.5.jar:/home/tarara-x/.gradle/caches/modules-2/files-2.1/jakarta.annotation/jakarta.annotation-api/2.1.1/48b9bda22b091b1f48b13af03fe36db3be6e1ae3/jakarta.annotation-api-2.1.1.jar:/home/tarara-x/.gradle/caches/modules-2/files-2.1/org.springframework/spring-webmvc/6.2.10/d3491aedc2636378cd273f6266d49f43a8b3e241/spring-webmvc-6.2.10.jar:/home/tarara-x/.gradle/caches/modules-2/files-2.1/org.springframework/spring-web/6.2.10/38c2f6633a44b385b6263294c38e5a4f217c005c/spring-web-6.2.10.jar:/home/tarara-x/.gradle/caches/modules-2/files-2.1/org.springframework/spring-context/6.2.10/80464a79539a19a00e32eccb041670f34857fe7/spring-context-6.2.10.jar:/home/tarara-x/.gradle/caches/modules-2/files-2.1/org.springframework/spring-aop/6.2.10/2b194c29deaadb71a8a8e5b8b41d9521c29a0d66/spring-aop-6.2.10.jar:/home/tarara-x/.gradle/caches/modules-2/files-2.1/org.springframework/spring-beans/6.2.10/88ffda89593a74bb356a96ea2ed235ec6e083cfa/spring-beans-6.2.10.jar:/home/tarara-x/.gradle/caches/modules-2/files-2.1/org.springframework/spring-expression/6.2.10/16bdfead8a73673e395441c14b1868a128fc87c2/spring-expression-6.2.10.jar:/home/tarara-x/.gradle/caches/modules-2/files-2.1/org.springframework/spring-core/6.2.10/82d9c797f9147b643ac0aab8a1a40e96f8d8a737/spring-core-6.2.10.jar:/home/tarara-x/.gradle/caches/modules-2/files-2.1/org.yaml/snakeyaml/2.4/e0666b825b796f85521f02360e77f4c92c5a7a07/snakeyaml-2.4.jar:/home/tarara-x/.gradle/caches/modules-2/files-2.1/ch.qos.logback/logback-classic/1.5.18/fc371f3fc97a639de2d67947cffb7518ec5e3d40/logback-classic-1.5.18.jar:/home/tarara-x/.gradle/caches/modules-2/files-2.1/org.apache.logging.log4j/log4j-to-slf4j/2.24.3/da1143e2a2531ee1c2d90baa98eb50a28a39d5a7/log4j-to-slf4j-2.24.3.jar:/home/tarara-x/.gradle/caches/modules-2/files-2.1/org.slf4j/jul-to-slf4j/2.0.17/524cb6ccc2b68a57604750e1ab8b13b5a786a6aa/jul-to-slf4j-2.0.17.jar:/home/tarara-x/.gradle/caches/modules-2/files-2.1/org.springframework/spring-jcl/6.2.10/9ff7e998fe11d991f6b7fd000a0c6583c9e6ffee/spring-jcl-6.2.10.jar:/home/tarara-x/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.datatype/jackson-datatype-jsr310/2.19.2/72e73f048b36d9df82aef146bf8b2ae63b2e28e2/jackson-datatype-jsr310-2.19.2.jar:/home/tarara-x/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.module/jackson-module-parameter-names/2.19.2/3c4ce467c11364c72ec4967c570fd5a2d1be1d0b/jackson-module-parameter-names-2.19.2.jar:/home/tarara-x/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-annotations/2.19.2/c5381f11988ae3d424b197a26087d86067b6d7d/jackson-annotations-2.19.2.jar:/home/tarara-x/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-core/2.19.2/50f3b4bd59b9ff51a0ed493e7b5abaf5c39709bf/jackson-core-2.19.2.jar:/home/tarara-x/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.datatype/jackson-datatype-jdk8/2.19.2/a720d3946c3a1ab04b780f3b3163d62eee6948a0/jackson-datatype-jdk8-2.19.2.jar:/home/tarara-x/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-databind/2.19.2/46509399d28f57ca32c6bb4b0d4e10e8f062051e/jackson-databind-2.19.2.jar:/home/tarara-x/.gradle/caches/modules-2/files-2.1/org.apache.tomcat.embed/tomcat-embed-websocket/10.1.44/1966a8224858c4b4480469bfcdcaa3f8faf59cc7/tomcat-embed-websocket-10.1.44.jar:/home/tarara-x/.gradle/caches/modules-2/files-2.1/org.apache.tomcat.embed/tomcat-embed-core/10.1.44/5e18d00936ca925c9249f1a8e77c0e8adf1d6287/tomcat-embed-core-10.1.44.jar:/home/tarara-x/.gradle/caches/modules-2/files-2.1/org.apache.tomcat.embed/tomcat-embed-el/10.1.44/6ee7685651c5eba1f4bef99f9dbb38b89d1a6cb6/tomcat-embed-el-10.1.44.jar:/home/tarara-x/.gradle/caches/modules-2/files-2.1/io.micrometer/micrometer-observation/1.15.3/e95d07e329f6d3ecb15a6ba1c5d96c25b9df0a97/micrometer-observation-1.15.3.jar:/home/tarara-x/.gradle/caches/modules-2/files-2.1/ch.qos.logback/logback-core/1.5.18/6c0375624f6f36b4e089e2488ba21334a11ef13f/logback-core-1.5.18.jar:/home/tarara-x/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-api/2.0.17/d9e58ac9c7779ba3bf8142aff6c830617a7fe60f/slf4j-api-2.0.17.jar:/home/tarara-x/.gradle/caches/modules-2/files-2.1/org.apache.logging.log4j/log4j-api/2.24.3/b02c125db8b6d295adf72ae6e71af5d83bce2370/log4j-api-2.24.3.jar:/home/tarara-x/.gradle/caches/modules-2/files-2.1/io.micrometer/micrometer-commons/1.15.3/3a97060d64a54daa11f14365aebc559fa8820281/micrometer-commons-1.15.3.jar com.my_eshop.my_eshop.MyEshopApplication
+Successfully started process 'command '/usr/lib/jvm/jdk-24.0.2-oracle-x64/bin/java''
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+[32m :: Spring Boot :: [39m              [2m (v3.5.5)[0;39m
+
+[2m2025-09-21T20:58:28.602+03:00[0;39m [32m INFO[0;39m [35m30358[0;39m [2m--- [my-eshop] [           main] [0;39m[36mc.my_eshop.my_eshop.MyEshopApplication  [0;39m [2m:[0;39m Starting MyEshopApplication using Java 24.0.2 with PID 30358 (/home/tarara-x/IdeaProjects/my-eshop/build/classes/java/main started by tarara-x in /home/tarara-x/IdeaProjects/my-eshop)
+[2m2025-09-21T20:58:28.605+03:00[0;39m [32m INFO[0;39m [35m30358[0;39m [2m--- [my-eshop] [           main] [0;39m[36mc.my_eshop.my_eshop.MyEshopApplication  [0;39m [2m:[0;39m No active profile set, falling back to 1 default profile: "default"
+[2m2025-09-21T20:58:29.155+03:00[0;39m [32m INFO[0;39m [35m30358[0;39m [2m--- [my-eshop] [           main] [0;39m[36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat initialized with port 8080 (http)
+[2m2025-09-21T20:58:29.175+03:00[0;39m [32m INFO[0;39m [35m30358[0;39m [2m--- [my-eshop] [           main] [0;39m[36mo.apache.catalina.core.StandardService  [0;39m [2m:[0;39m Starting service [Tomcat]
+[2m2025-09-21T20:58:29.175+03:00[0;39m [32m INFO[0;39m [35m30358[0;39m [2m--- [my-eshop] [           main] [0;39m[36mo.apache.catalina.core.StandardEngine   [0;39m [2m:[0;39m Starting Servlet engine: [Apache Tomcat/10.1.44]
+[2m2025-09-21T20:58:29.216+03:00[0;39m [32m INFO[0;39m [35m30358[0;39m [2m--- [my-eshop] [           main] [0;39m[36mo.a.c.c.C.[Tomcat].[localhost].[/]      [0;39m [2m:[0;39m Initializing Spring embedded WebApplicationContext
+[2m2025-09-21T20:58:29.217+03:00[0;39m [32m INFO[0;39m [35m30358[0;39m [2m--- [my-eshop] [           main] [0;39m[36mw.s.c.ServletWebServerApplicationContext[0;39m [2m:[0;39m Root WebApplicationContext: initialization completed in 576 ms
+[2m2025-09-21T20:58:29.457+03:00[0;39m [33m WARN[0;39m [35m30358[0;39m [2m--- [my-eshop] [           main] [0;39m[36mConfigServletWebServerApplicationContext[0;39m [2m:[0;39m Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+[2m2025-09-21T20:58:29.468+03:00[0;39m [32m INFO[0;39m [35m30358[0;39m [2m--- [my-eshop] [           main] [0;39m[36m.s.b.a.l.ConditionEvaluationReportLogger[0;39m [2m:[0;39m 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+[2m2025-09-21T20:58:29.480+03:00[0;39m [31mERROR[0;39m [35m30358[0;39m [2m--- [my-eshop] [           main] [0;39m[36mo.s.b.d.LoggingFailureAnalysisReporter  [0;39m [2m:[0;39m 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+4 actionable tasks: 2 executed, 2 up-to-date
