@@ -4,7 +4,10 @@ import com.my_eshop.my_eshop.entity.Category;
 import com.my_eshop.my_eshop.entity.Product;
 import com.my_eshop.my_eshop.repository.CategoryRepository;
 import com.my_eshop.my_eshop.repository.ProductRepository;
+import org.springframework.dao.DataIntegrityViolationException;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
+import org.springframework.web.server.ResponseStatusException;
 
 import java.util.List;
 
@@ -29,15 +32,31 @@ public class ProductService {
     }
 
     public Product create(Product p, Long categoryId){
-        Category c = categoryRepository.findById(categoryId).orElseThrow(() -> new RuntimeException("Category not found"));
+        Category c = categoryRepository.findById(categoryId)
+                .orElseThrow(() -> new ResponseStatusException(
+                        HttpStatus.NOT_FOUND, "Category not found: " + categoryId));
+
+        // δένουμε την κατηγορία (αλλιώς θα σκάσει NOT NULL στο category_id)
         p.setCategory(c);
-        return productRepository.save(p);
+
+        try {
+            return productRepository.save(p);
+        } catch (DataIntegrityViolationException ex) {
+            // π.χ. duplicate SKU, NULL σε NOT NULL στήλη, invalid FK κ.λπ.
+            throw new ResponseStatusException(
+                    HttpStatus.BAD_REQUEST,
+                    "Product violates constraints (e.g. duplicate SKU or missing required field).",
+                    ex
+            );
+        }
     }
 
     public Product update(Long id, Product in, Long categoryId){
         return productRepository.findById(id).map(p -> {
-            if (categoryId!=null){
-                Category c = categoryRepository.findById(categoryId).orElseThrow(() -> new RuntimeException("Category not found"));
+            if (categoryId != null) {
+                Category c = categoryRepository.findById(categoryId)
+                        .orElseThrow(() -> new ResponseStatusException(
+                                HttpStatus.NOT_FOUND, "Category not found: " + categoryId));
                 p.setCategory(c);
             }
             p.setSku(in.getSku());
@@ -48,8 +67,18 @@ public class ProductService {
             p.setVatRate(in.getVatRate());
             p.setStatus(in.getStatus());
             p.setStockQty(in.getStockQty());
-            return productRepository.save(p);
-        }).orElseThrow(() -> new RuntimeException("Product not found: "+id));
+
+            try {
+                return productRepository.save(p);
+            } catch (DataIntegrityViolationException ex) {
+                throw new ResponseStatusException(
+                        HttpStatus.BAD_REQUEST,
+                        "Product violates constraints (e.g. duplicate SKU or missing required field).",
+                        ex
+                );
+            }
+        }).orElseThrow(() -> new ResponseStatusException(
+                HttpStatus.NOT_FOUND, "Product not found: " + id));
     }
 
     public void delete(Long id) {

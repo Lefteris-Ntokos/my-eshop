@@ -6,58 +6,42 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-@CrossOrigin (origins = "*")
+
+@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("/api/products")
 public class ProductController {
 
     private final ProductService productService;
-
     public ProductController(ProductService productService) {
         this.productService = productService;
     }
 
-//    @GetMapping("/products")
-//    public String products (@RequestParam String products) {
-//
-//        return products;
-//    }
-
+    // GET /api/products
     @GetMapping
     public List<Product> getAllProducts() {
         return productService.findAll();
     }
 
-    // προϊόντα με βάση το όνομα
+    // GET /api/products/search?name=...
     @GetMapping("/search")
     public List<Product> getByName(@RequestParam String name) {
         return productService.findByName(name);
     }
 
+    // POST /api/products/category/{categoryId}
     @PostMapping("/category/{categoryId}")
-    public Product create(@RequestBody Product product,
-                          @PathVariable Long categoryId) {
-        return productService.create(product, categoryId);
+    public ResponseEntity<Product> create(@PathVariable Long categoryId,
+                                          @RequestBody Product product) {
+        Product saved = productService.create(product, categoryId);
+        return ResponseEntity.status(201).body(saved);
     }
 
-//    @GetMapping ("/get-products")
-//    public String getName (@RequestParam String getName) {
-//
-//        return getName;
-//    }
-
-//    @DeleteMapping("/delete-products")
-//    public String deleteProducts(@RequestParam String getName) {
-//
-//        return getName;
-//    }
-
+    // DELETE /api/products/{id}
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> delete(@PathVariable Long id) {
         productService.delete(id);
         return ResponseEntity.noContent().build();
     }
-
-
-
 }
+

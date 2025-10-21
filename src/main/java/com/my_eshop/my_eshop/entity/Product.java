@@ -18,10 +18,16 @@ public class Product {
     @Column(name = "products_id")
     private Long id;
 
+//    @ManyToOne(fetch = FetchType.LAZY)
+//    @JoinColumn(name = "categories_id", nullable = false)
+//    @JsonIgnore
+//    private Category category;
+
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "categories_id", nullable = false)
-    @JsonIgnore
+    @JoinColumn(name = "category_id", nullable = false)
+    @com.fasterxml.jackson.annotation.JsonIgnore
     private Category category;
+
 
     @Column(name = "stock_keeping_unit", nullable = false, unique = true, length = 60)
     private String sku;
@@ -65,7 +71,4 @@ public class Product {
     )
     private Set<Tag> tags;
 
-    public void setCategory(Category category) {
-
-    }
 }

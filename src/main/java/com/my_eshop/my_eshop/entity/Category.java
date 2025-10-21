@@ -25,7 +25,7 @@ public class Category {
     @Column(length = 255)
     private String description;
 
-    @JsonIgnore
     @OneToMany(mappedBy = "category", fetch = FetchType.LAZY)
+    @com.fasterxml.jackson.annotation.JsonIgnore
     private List<Product> products;
 }
