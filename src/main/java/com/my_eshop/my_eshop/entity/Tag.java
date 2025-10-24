@@ -20,7 +20,8 @@ public class Tag {
     @Column(nullable = false, unique = true, length = 40)
     private String name;
 
-    @JsonIgnore
+//    @JsonIgnore
     @ManyToMany(mappedBy = "tags", fetch = FetchType.LAZY)
+    @com.fasterxml.jackson.annotation.JsonIgnore
     private Set<Product> products;
 }

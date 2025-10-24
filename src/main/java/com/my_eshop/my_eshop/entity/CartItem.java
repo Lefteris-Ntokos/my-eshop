@@ -14,9 +14,9 @@ public class CartItem {
     @Column(name = "cart_items_id")
     private Long id;
 
-    @JsonIgnore
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "cart_id", nullable = false)
+    @com.fasterxml.jackson.annotation.JsonIgnore
     private Cart cart;
 
     @ManyToOne(fetch = FetchType.LAZY)

@@ -70,6 +70,7 @@ public class Product {
             joinColumns = @JoinColumn(name = "products_id"),
             inverseJoinColumns = @JoinColumn(name = "tags_id")
     )
+    @com.fasterxml.jackson.annotation.JsonIgnoreProperties("products") // αγνόησε το back-reference
     private Set<Tag> tags;
 
 }

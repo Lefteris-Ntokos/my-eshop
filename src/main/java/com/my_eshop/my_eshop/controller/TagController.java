@@ -31,14 +31,14 @@ public class TagController {
         return ResponseEntity.noContent().build();
     }
 
-    @PostMapping ("/attach")
-    public Product attach(@RequestParam Long productId, @RequestParam String tag){
-        return service.attach(productId, tag);
-    }
-
-    @PostMapping("/detach")
-    public Product detach(@RequestParam Long productId, @RequestParam String tag){
-        return service.detach(productId, tag);
-    }
+//    @PostMapping ("/attach")
+//    public Product attach(@RequestParam Long productId, @RequestParam String tag){
+//        return service.attach(productId, tag);
+//    }
+//
+//    @PostMapping("/detach")
+//    public Product detach(@RequestParam Long productId, @RequestParam String tag){
+//        return service.detach(productId, tag);
+//    }
 }
 

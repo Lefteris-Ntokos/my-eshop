@@ -14,17 +14,20 @@ public class CartController {
     public CartController(CartService service){ this.service=service; }
 
     @GetMapping
-    public Cart get(@PathVariable Long userId){ return service.getOrCreateCart(userId); }
+    public Cart getCart(@PathVariable Long userId){ return service.getOrCreateCart(userId); }
 
     @PostMapping("/items")
-    public Cart addItem(@PathVariable Long userId, @RequestBody AddCartItemDto dto){
-        return service.addItem(userId, dto);
+    public ResponseEntity<Cart> addItem(@PathVariable Long userId, @RequestBody AddCartItemDto dto){
+        return ResponseEntity.ok(service.addItem(userId, dto));
     }
 
     @DeleteMapping("/items/{cartItemId}")
-    public Cart removeItem(@PathVariable Long userId, @PathVariable Long cartItemId){
-        return service.removeItem(userId, cartItemId);
+    public ResponseEntity<Void> removeItem(@PathVariable Long userId,
+                                           @PathVariable Long cartItemId) {
+        service.removeItem(userId, cartItemId);
+        return ResponseEntity.noContent().build();
     }
 
-    @DeleteMapping public ResponseEntity<Void> clear(@PathVariable Long userId){ service.clear(userId); return ResponseEntity.noContent().build(); }
+    @DeleteMapping
+    public ResponseEntity<Void> clear(@PathVariable Long userId){ service.clear(userId); return ResponseEntity.noContent().build(); }
 }
