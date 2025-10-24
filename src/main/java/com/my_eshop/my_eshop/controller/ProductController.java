@@ -1,5 +1,6 @@
 package com.my_eshop.my_eshop.controller;
 
+import com.my_eshop.my_eshop.dto.ProductSummaryDto;
 import com.my_eshop.my_eshop.entity.Product;
 import com.my_eshop.my_eshop.service.ProductService;
 import org.springframework.http.ResponseEntity;
@@ -18,9 +19,25 @@ public class ProductController {
     }
 
     // GET /api/products
+//    @GetMapping
+//    public List<Product> getAllProducts() {
+//        return productService.findAll();
+//    }
+
     @GetMapping
-    public List<Product> getAllProducts() {
-        return productService.findAll();
+    public List<ProductSummaryDto> getAllProducts() {
+        return productService.findAll().stream()
+                .map(p -> new ProductSummaryDto(
+                        p.getId(),
+                        p.getSku(),
+                        p.getName(),
+                        p.getPriceCents(),
+                        p.getCurrency(),
+                        p.getVatRate(),
+                        p.getStatus(),
+                        p.getStockQty()
+                ))
+                .toList();
     }
 
     // GET /api/products/search?name=...

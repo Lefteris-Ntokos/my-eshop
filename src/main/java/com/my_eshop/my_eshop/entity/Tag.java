@@ -21,7 +21,14 @@ public class Tag {
     private String name;
 
 //    @JsonIgnore
+//    @ManyToMany(mappedBy = "tags", fetch = FetchType.LAZY)
+//    @com.fasterxml.jackson.annotation.JsonIgnore
+//    private Set<Product> products;
+//}
+
     @ManyToMany(mappedBy = "tags", fetch = FetchType.LAZY)
     @com.fasterxml.jackson.annotation.JsonIgnore
-    private Set<Product> products;
+    private java.util.Set<Product> products = new java.util.HashSet<>();
+
+
 }

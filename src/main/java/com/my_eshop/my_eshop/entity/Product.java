@@ -60,9 +60,10 @@ public class Product {
     @Column(name = "updated_at", insertable = false, updatable = false)
     private LocalDateTime updatedAt;
 
-    @JsonIgnore
+//    @JsonIgnore
     @OneToMany(mappedBy = "product", fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<ProductImage> images;
+    @com.fasterxml.jackson.annotation.JsonIgnore
+    private java.util.List<ProductImage> images;
 
     @ManyToMany(fetch = FetchType.LAZY,cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     @JoinTable(
@@ -71,6 +72,6 @@ public class Product {
             inverseJoinColumns = @JoinColumn(name = "tags_id")
     )
     @com.fasterxml.jackson.annotation.JsonIgnoreProperties("products") // αγνόησε το back-reference
-    private Set<Tag> tags;
-
+//    private Set<Tag> tags;
+    private java.util.Set<Tag> tags  = new java.util.HashSet<>();
 }

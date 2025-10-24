@@ -160,6 +160,9 @@ public class OrderService {
     }
 
     public Optional<Order> byId(Long id){ return orders.findById(id); }
-    public List<Order> byUser(Long userId){ return orders.findAll().stream().filter(o -> o.getUser()!=null && o.getUser().getId().equals(userId)).toList(); }
+//    public List<Order> byUser(Long userId){ return orders.findAll().stream().filter(o -> o.getUser()!=null && o.getUser().getId().equals(userId)).toList(); }
+    public List<Order> byUser(Long userId){
+    return orders.findByUserId(userId);
+    }
 }
 
