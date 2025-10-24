@@ -23,6 +23,13 @@ public class CategoryController {
         return categoryService.findAll();
     }
 
+    @GetMapping("/{id}")
+    public ResponseEntity<Category> getOne(@PathVariable Long id) {
+        return categoryService.byId(id)
+                .map(ResponseEntity::ok)
+                .orElse(ResponseEntity.notFound().build());
+    }
+
     @PostMapping
     public Category create(@RequestBody Category category) {
         return categoryService.create(category);

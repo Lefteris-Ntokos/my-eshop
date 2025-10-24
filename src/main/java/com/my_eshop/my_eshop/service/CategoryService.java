@@ -5,6 +5,7 @@ import com.my_eshop.my_eshop.repository.CategoryRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class CategoryService {
@@ -13,6 +14,10 @@ public class CategoryService {
 
     public CategoryService(CategoryRepository categoryRepository) {
         this.categoryRepository = categoryRepository;
+    }
+
+    public Optional<Category> byId(Long id) {
+        return categoryRepository.findById(id);
     }
 
     public List<Category> findAll() {

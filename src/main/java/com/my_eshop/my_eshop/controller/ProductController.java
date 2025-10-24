@@ -41,9 +41,25 @@ public class ProductController {
     }
 
     // GET /api/products/search?name=...
+//    @GetMapping("/search")
+//    public List<Product> getByName(@RequestParam String name) {
+//        return productService.findByName(name);
+//    }
+
     @GetMapping("/search")
-    public List<Product> getByName(@RequestParam String name) {
-        return productService.findByName(name);
+    public List<ProductSummaryDto> getByName(@RequestParam String name) {
+        return productService.findByName(name).stream()
+                .map(p -> new ProductSummaryDto(
+                        p.getId(),
+                        p.getSku(),
+                        p.getName(),
+                        p.getPriceCents(),
+                        p.getCurrency(),
+                        p.getVatRate(),
+                        p.getStatus(),
+                        p.getStockQty()
+                ))
+                .toList();
     }
 
     // POST /api/products/category/{categoryId}
@@ -53,6 +69,16 @@ public class ProductController {
         Product saved = productService.create(product, categoryId);
         return ResponseEntity.status(201).body(saved);
     }
+
+    // PUT /api/products/{id}?categoryId=...
+    @PutMapping("/{id}")
+    public ResponseEntity<Product> update(@PathVariable Long id,
+                                          @RequestBody Product in,
+                                          @RequestParam(required = false) Long categoryId) {
+        Product updated = productService.update(id, in, categoryId);
+        return ResponseEntity.ok(updated);
+    }
+
 
     // DELETE /api/products/{id}
     @DeleteMapping("/{id}")
